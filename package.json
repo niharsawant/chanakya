@@ -1,16 +1,16 @@
 {
-  "name": "Pure LESS",
+  "name": "pure-less",
   "version": "0.0.1",
   "description": "LESS Implementation of Pure CSS",
   "author": "Nihar Sawant <nihar.sawant@gmail.com>",
   "license": "MIT",
-  "private": true,
   "repository" : {
     "type" : "git",
     "url" : "http://github.com/dewbot/pure-less.git"
   },
-  "dependencies" : {
+  "devDependencies" : {
     "less" : "*",
+    "bower" : "*",
     "grunt" : "*",
     "grunt-contrib-less" : "*",
     "grunt-contrib-watch" : "*"
