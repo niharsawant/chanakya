@@ -10,7 +10,6 @@
   },
   "devDependencies" : {
     "less" : "*",
-    "bower" : "*",
     "grunt" : "*",
     "grunt-contrib-less" : "*",
     "grunt-contrib-watch" : "*"
