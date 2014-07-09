@@ -12,7 +12,8 @@ module.exports = function (grunt) {
           "build/base.css" : [
             "bower_components/normalize-css/normalize.css",
             "src/base.less"
-          ]
+          ],
+          "build/buttons.css" : "src/buttons.less"
         }
       }
     },

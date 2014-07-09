@@ -1,0 +1,47 @@
+
+@import "defaults.less";
+
+.pure-button {
+  display: inline-block;
+  font-family: inherit;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  color: #444;
+  border: 1px solid #999;
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-align: center;
+  cursor: pointer;
+
+  .drag(none);
+
+  &:hover, &:focus {
+    .linear-gradient(~"transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10)");
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+  }
+
+  &:disabled {
+    border: none;
+    background-image: none;
+    opacity: 0.40;
+    cursor: not-allowed;
+
+    box-shadow: none;
+  }
+
+  &::moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+}
