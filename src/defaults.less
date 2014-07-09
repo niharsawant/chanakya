@@ -1,0 +1,32 @@
+
+/*
+  Mixins related to prefix based css
+*/
+.drag (@style) {
+  -webkit-user-drag: @style;
+  -webkit-user-select: @style;
+  -moz-user-select: @style;
+  -ms-user-select: @style;
+  user-select: @style;
+}
+.transition (@style) {
+  -webkit-transition: @style;
+  -moz-transition: @style;
+  -ms-transition: @style;
+  -o-transition: @style;
+  transition: @style;
+}
+.transform(@style) {
+  -webkit-transform: @style;
+  -moz-transform: @style;
+  -ms-transform: @style;
+  -o-transform: @style;
+  transform: @style;
+}
+.linear-gradient (@style) {
+  background-image: -webkit-linear-gradient(@style);
+  background-image: -moz-linear-gradient(@style);
+  background-image: -ms-linear-gradient(@style);
+  background-image: -o-linear-gradient(@style);
+  background-image: linear-gradient(@style);
+}
