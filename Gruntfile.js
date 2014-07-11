@@ -7,10 +7,14 @@ module.exports = function (grunt) {
 
     // Compile LESS files to CSS by keeping them readable
     less : {
+      options : {
+        paths : ['src/']
+      },
       compile : {
         files : {
-          'build/base.css' : 'src/base.less',
-          'build/buttons.css' : 'src/buttons.less'
+          'build/src/base.css' : 'src/base.less',
+          'build/src/helper.css' : 'src/helper.less',
+          'build/src/buttons.css' : 'src/buttons.less'
         }
       }
     },
@@ -18,12 +22,15 @@ module.exports = function (grunt) {
     // Create a beautified build by concating
     concat : {
       options : {
-        stripBanners : true,
         banner : '/*! <%= pkg.name %> | v<%= pkg.version %> | MIT License | ' +
           '<%= pkg.author %> */\n',
       },
       css : {
-        src : ['build/*.css'],
+        src : [
+          'build/src/base.css',
+          'build/src/helper.css',
+          'build/src/buttons.css'
+        ],
         dest : 'build/chanakya.css'
       }
     },
