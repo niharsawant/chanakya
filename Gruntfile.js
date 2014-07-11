@@ -22,10 +22,6 @@ module.exports = function (grunt) {
         banner : '/*! <%= pkg.name %> | v<%= pkg.version %> | MIT License | ' +
           '<%= pkg.author %> */\n',
       },
-      less : {
-        src : ['src/*.less'],
-        dest : 'build/chanakya.less',
-      },
       css : {
         src : ['build/*.css'],
         dest : 'build/chanakya.css'
