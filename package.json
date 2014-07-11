@@ -1,5 +1,5 @@
 {
-  "name": "pure-less",
+  "name": "chanakya",
   "version": "0.0.1",
   "description": "LESS Implementation of Pure CSS",
   "author": "Nihar Sawant <nihar.sawant@gmail.com>",
@@ -12,6 +12,7 @@
     "less" : "*",
     "grunt" : "*",
     "grunt-contrib-less" : "*",
-    "grunt-contrib-watch" : "*"
+    "grunt-contrib-watch" : "*",
+    "grunt-contrib-concat" : "*"
   }
 }

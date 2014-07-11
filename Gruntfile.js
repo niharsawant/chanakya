@@ -9,9 +9,26 @@ module.exports = function (grunt) {
     less : {
       compile : {
         files : {
-          "build/base.css" : "src/base.less",
-          "build/buttons.css" : "src/buttons.less"
+          'build/base.css' : 'src/base.less',
+          'build/buttons.css' : 'src/buttons.less'
         }
+      }
+    },
+
+    // Create a beautified build by concating
+    concat : {
+      options : {
+        stripBanners : true,
+        banner : '/*! <%= pkg.name %> | v<%= pkg.version %> | MIT License | ' +
+          '<%= pkg.author %> */\n',
+      },
+      less : {
+        src : ['src/*.less'],
+        dest : 'build/chanakya.less',
+      },
+      css : {
+        src : ['build/*.css'],
+        dest : 'build/chanakya.css'
       }
     },
 
@@ -30,7 +47,8 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('default', ['less:compile']);
+  grunt.registerTask('default', ['less:compile', 'concat']);
 
 };
