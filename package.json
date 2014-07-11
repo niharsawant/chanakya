@@ -1,7 +1,7 @@
 {
   "name": "chanakya",
-  "version": "0.0.1",
-  "description": "LESS Implementation of Pure CSS",
+  "version": "0.0.2",
+  "description": "Collection very lightweight and reusable LESS modules for Web Development",
   "author": "Nihar Sawant <nihar.sawant@gmail.com>",
   "license": "MIT",
   "repository" : {
