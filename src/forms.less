@@ -1,0 +1,62 @@
+
+@import "defaults.less";
+
+.form {
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="url"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="week"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  select,
+  textarea {
+    padding: 0.5em 0.6em;
+    margin-right: 0.4em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &:focus {
+      outline: 0;
+      border-color: #129FEA;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #eaeded;
+      color: #cad2d3;
+    }
+  }
+
+  fieldset {
+    margin: 0;
+    padding: 0.35em 0 0.75em;
+    border: 0;
+  }
+
+  legend {
+    display: block;
+    width: 100%;
+    padding: 0.3em 0;
+    margin-bottom: 0.3em;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+
+.form-group {
+  margin-bottom: 0.5em;
+}

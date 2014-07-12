@@ -13,8 +13,9 @@ module.exports = function (grunt) {
       compile : {
         files : {
           'build/src/base.css' : 'src/base.less',
+          'build/src/forms.css' : 'src/forms.less',
           'build/src/helper.css' : 'src/helper.less',
-          'build/src/buttons.css' : 'src/buttons.less'
+          'build/src/buttons.css' : 'src/buttons.less',
         }
       }
     },
@@ -29,6 +30,7 @@ module.exports = function (grunt) {
         src : [
           'build/src/base.css',
           'build/src/helper.css',
+          'build/src/forms.css',
           'build/src/buttons.css'
         ],
         dest : 'build/chanakya.css'
@@ -36,7 +38,7 @@ module.exports = function (grunt) {
     },
 
     // Watch task for file changes in LESS which will compile them into CSS
-    watch : {
+    observe : {
       css : {
         files : 'src/*.less',
         tasks : ['less:compile'],
@@ -51,6 +53,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
+
+  grunt.renameTask('watch', 'observe');
+  grunt.registerTask('watch', ['less:compile', 'observe']);
 
   grunt.registerTask('default', ['less:compile', 'concat']);
 
