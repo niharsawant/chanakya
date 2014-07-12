@@ -2,6 +2,14 @@
 @import "defaults.less";
 
 .form {
+  width: 21em;
+  padding: 2em;
+  background: #FFF;
+  border-top: 1px solid #FFF;
+  box-shadow: 0 1px 5px rgba(120,120,120,0.2);
+}
+
+.form {
   input[type="text"],
   input[type="password"],
   input[type="email"],
@@ -50,10 +58,11 @@
   legend {
     display: block;
     width: 100%;
-    padding: 0.3em 0;
-    margin-bottom: 0.3em;
+    padding: 0.5em 0;
+    margin-bottom: 1em;
     color: #333;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #E5E5E5;
+    text-align: center;
   }
 }
 
@@ -66,4 +75,9 @@
 
 .form-group {
   margin-bottom: 1em;
+}
+
+.form-controls {
+  width: 100%;
+  display: table;
 }
